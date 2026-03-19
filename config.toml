@@ -1,0 +1,24 @@
+[task]
+deterministic = true
+
+[requirements]
+packages = ["build-essential", "build-essential", "build-essential", "pkg-config"]  
+
+[inputs]
+type = "file_single"
+
+[inputs.file_single]
+path = "wordlist.txt"
+format = "text"
+delimiter = "\n"
+
+
+[runner]
+command    = "python calculate.py"
+arg_start  = "--start"
+arg_end    = "--end"
+extra_args = ""
+
+[outputs]
+dir              = "outputs"
+filename_pattern = "john.pot"
