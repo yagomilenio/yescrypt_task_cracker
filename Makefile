@@ -2,17 +2,25 @@
 
 help:
 	@echo ""
-	@echo "  make setup                    instala Blender"
-	@echo "  make run HASH=$y$j9T$6EjPWvckfxRiWQIKFMmUF.$t8fMGSJnaI1iRjNIwXWTDSe7Pz9uVgMAp2WJVPI1k1D"
+	@echo "  make setup                    instala john"
+	@echo "  make run WORD='1234'"
 	@echo "  make clean                    borra outputs"
 	@echo ""
 
 setup:
 	git clone https://github.com/openwall/john.git
 	cd john/src && ./configure && make -s clean && make -sj$(nproc)
+	wget https://weakpass.com/download/90/rockyou.txt.gz
+	wget https://crackstation.net/files/crackstation.txt.gz
+	gunzip rockyou.txt.gz
+	gunzip crackstation.txt.gz
+	rm -f *.gz
+	cat rockyou.txt.gz >> crackstation.txt
+	rm rockyou.txt
+	mv crackstation.txt wordlist.txt
 
 run:
-	echo $HASH |  john/run/john --stdin --wordlist=wordlist.txt
+	echo $$WORD |  john/run/john hashes.txt --stdin
 
 
 clean:
