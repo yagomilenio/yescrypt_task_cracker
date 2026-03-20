@@ -2,7 +2,7 @@
 deterministic = true
 
 [requirements]
-packages = ["build-essential", "build-essential", "build-essential", "pkg-config"]  
+packages = ["build-essential", "libssl-dev"]  
 
 [inputs]
 type = "file_single"
