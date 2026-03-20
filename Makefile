@@ -1,15 +1,9 @@
-START  ?= 1
-END    ?= 10
-BLEND  ?= $(shell ls *.blend 2>/dev/null | head -1)
-OUTPUT ?= outputs/frames_$(START)_$(END).tar.gz
-
-.PHONY: help setup run test clean
+.PHONY: help setup run clean
 
 help:
 	@echo ""
 	@echo "  make setup                    instala Blender"
-	@echo "  make run START=1 END=50       renderiza frames 1-50"
-	@echo "  make test                     prueba rápida (frames 1-3)"
+	@echo "  make run HASH=$y$j9T$6EjPWvckfxRiWQIKFMmUF.$t8fMGSJnaI1iRjNIwXWTDSe7Pz9uVgMAp2WJVPI1k1D"
 	@echo "  make clean                    borra outputs"
 	@echo ""
 
@@ -18,7 +12,7 @@ setup:
 	cd john/src && ./configure && make -s clean && make -sj$(nproc)
 
 run:
-	john/run/john hashes.txt --wordlist=wordlist.txt
+	echo $HASH |  john/run/john --stdin --wordlist=wordlist.txt
 
 
 clean:
