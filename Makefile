@@ -3,7 +3,7 @@
 help:
 	@echo ""
 	@echo "  make setup                    instala john"
-	@echo "  make run WORD='1234'"
+	@echo "  make run WORDS='1234 holamunod passwd'"
 	@echo "  make clean                    borra outputs"
 	@echo ""
 
@@ -20,7 +20,7 @@ setup:
 	mv crackstation.txt wordlist.txt
 
 run:
-	echo $$WORD |  john/run/john hashes.txt --stdin
+	echo $$WORDS | tr ' ' '\n' |  john/run/john hashes.txt --stdin
 
 
 clean:
