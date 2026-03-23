@@ -8,7 +8,7 @@ packages = ["build-essential", "libssl-dev"]
 type = "file_single"
 
 [inputs.file_single]
-path = "rockyou.txt"
+path = "rockyou_1k.txt"
 format = "text"
 delimiter = "\n"
 
