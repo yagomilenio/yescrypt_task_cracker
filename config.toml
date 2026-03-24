@@ -20,5 +20,5 @@ arg_end    = "--end"
 extra_args = ""
 
 [outputs]
-dir              = "john/src"
+dir              = "john/run"
 filename_pattern = "john.pot"
