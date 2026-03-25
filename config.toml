@@ -9,7 +9,7 @@ type = "file_single"
 
 [inputs.file_single]
 path = "rockyou_1k.txt"
-index_file = "rockyou_1k.idx"
+index_file = "rockyou_1k.txt.idx"
 index_len = 8
 format = "text"
 delimiter = "\n"
