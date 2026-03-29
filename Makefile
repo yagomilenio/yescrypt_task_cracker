@@ -11,7 +11,7 @@ setup:
 	echo "Nada que instalar"
 
 run:
-	echo $$WORDS | tr ' ' '\n' |  john/run/john hashes.txt --stdin
+	echo $$WORDS | tr ' ' '\n' |  john hashes.txt --stdin
 
 
 clean:
