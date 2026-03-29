@@ -11,8 +11,8 @@ setup:
 	@echo "Nada que instalar"
 
 run:
-	echo $$WORDS | tr ' ' '\n' |  john hashes.txt --stdin
+	echo $$WORDS | tr ' ' '\n' |  john --show hashes.txt --stdin > john.pot
 
 
 clean:
-	rm -rf ~/.john
+	rm -rf john.pot
