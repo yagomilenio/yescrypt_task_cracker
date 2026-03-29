@@ -8,7 +8,7 @@ help:
 	@echo ""
 
 setup:
-	echo "Nada que instalar"
+	@echo "Nada que instalar"
 
 run:
 	echo $$WORDS | tr ' ' '\n' |  john hashes.txt --stdin
