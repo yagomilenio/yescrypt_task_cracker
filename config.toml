@@ -2,7 +2,7 @@
 deterministic = true
 
 [requirements]
-packages = ["build-essential", "libssl-dev"]  
+packages = ["build-essential", "libssl-dev", "john"]  
 
 [inputs]
 type = "file_single"
@@ -22,5 +22,5 @@ arg_end    = "--end"
 extra_args = ""
 
 [outputs]
-dir              = "john/run"
+dir              = "~/.john"
 filename_pattern = "john.pot"
