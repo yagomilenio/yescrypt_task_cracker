@@ -20,5 +20,5 @@ arg_end    = "--end"
 extra_args = ""
 
 [outputs]
-dir              = "~/.john"
+dir              = "john"
 filename_pattern = "john.pot"
