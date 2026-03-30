@@ -1,24 +1,17 @@
 [task]
-deterministic = true
+  deterministic = true
 
 [requirements]
-packages = ["build-essential", "libssl-dev", "john"]  
+  packages = ["build-essential", "libssl-dev", "john"]  
 
 [inputs]
-type = "file_single"
+  type = "file_single"
 
 [inputs.file_single]
-path = "rockyou_1k.txt"
-format = "text"
-delimiter = "\n"
-
-
-[runner]
-command    = "python calculate.py"
-arg_start  = "--start"
-arg_end    = "--end"
-extra_args = ""
+  path = "rockyou_1k.txt"
+  format = "text"
+  delimiter = "\n"
 
 [outputs]
-dir              = "~/.john"
-filename_pattern = "john.pot"
+  dir              = "~/.john"
+  filename_pattern = "john.pot"
